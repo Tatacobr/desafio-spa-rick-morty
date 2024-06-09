@@ -1,0 +1,34 @@
+<div class="col-3 wrapper">
+
+    <nav id="sidebar" style="overflow-y: auto; background-color: #6154a4;">
+        <div (click)='main()' class="sidebar-header" style="background-color: #6154a4">
+            <img src="../assets/logo.png" width="140">
+        </div>
+
+        <ul class="list-unstyled components" style="color: white">
+
+            <hr style="padding: 0; margin:11px;">
+
+            <li>
+                <a (click)="characters();">Characters</a>
+            </li>
+
+            <li>
+                <a (click)="locations();">Locations</a>
+            </li>
+
+            <li>
+                <a (click)="episodes();">Episodes</a>
+            </li>
+
+        </ul>
+        
+        <!-- <div style=" padding-top: -5px; color: white">
+            <a id="btlogout" (click)="logout();" class="btn btn-sm btn-outline-light mr-2">
+                Logout <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div> -->
+
+    </nav>
+
+</div>

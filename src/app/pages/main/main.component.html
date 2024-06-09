@@ -1,0 +1,42 @@
+<div class="col-12 main-container">
+  <div class="row col-12 submain-container">
+    <div class="container-fluid" style="padding: 0 !important">
+
+      <app-nav-bar></app-nav-bar>
+
+      <div class="card">
+        <div class="card-header card-header-tabs card-header-primary">
+          <h4 class="card-title">Rick and Morty</h4>
+        </div>
+
+        <form name="form1">
+          <div style="padding:20px; text-align: center;">
+            <div class="row col-md-12">
+              <div class="col-md-4">
+                  <div (click)="navigate('characters')" class="hover-pointer card mb-4">
+                    <div class="card-body">
+                        <h4>Characters</h4>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <div (click)="navigate('episodes')" class="hover-pointer card mb-4">
+                  <div class="card-body">
+                      <h4>Episodes</h4>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div (click)="navigate('locations')" class="hover-pointer card mb-4">
+                  <div class="card-body">
+                      <h4>Locations</h4>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item" [ngClass]="{'disabled':prev == null}">
+            <a class="page-link" (click)="prevPage()">Previous</a>
+        </li>
+        
+        <li class="page-item" [ngClass]="{'disabled':next == null}">
+            <a class="page-link" (click)="nextPage()">Next</a>
+        </li>
+    </ul>
+</nav>

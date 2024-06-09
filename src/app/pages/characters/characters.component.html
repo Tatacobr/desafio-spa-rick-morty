@@ -1,0 +1,29 @@
+<div class="col-12 main-container">
+    <div class="row col-12 submain-container">
+        <div class="container-fluid">
+
+            <app-nav-bar></app-nav-bar>
+
+            <div class="card p-5" style="padding-left: 0px !important;">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let character of characters">
+                        <div (click)="navigate(character?.id)" class="hover-pointer card mb-4">
+                            <img [src]="character.image" class="card-img-top" alt="{{character.name}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ character.name }}</h5>
+                                <label class="card-text">Status: {{ character.status }}</label>
+                                <label class="card-text">Species: {{ character.species }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <app-paginacao 
+                    [pages]="info?.pages"
+                    [next]="info?.next" 
+                    [prev]="info?.prev"
+                    (pageChanged)="onPageChanged($event)">
+                </app-paginacao>
+            </div>
+        </div>
+    </div>
+</div>

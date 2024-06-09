@@ -1,0 +1,85 @@
+<div class="col-12 main-container">
+    <div class="row col-12 submain-container">
+        <div class="container-fluid">
+
+            <app-nav-bar></app-nav-bar>
+
+            <div class="card p-5">
+                <div *ngIf="category == 'episodes'">
+                    <h1 class="mb-2">{{ object?.name }}</h1>
+                    <label><strong>Air Date:</strong> {{ object?.air_date }}</label>
+                    <br>
+                    <label><strong>Episode:</strong> {{ object?.episode }}</label>
+    
+                    <h2 class="mt-5">Characters</h2>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let character of characterList">
+                            <div class="card mb-4">
+                                <img [src]="character.image" class="card-img-top" alt="{{character.name}}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ character.name }}</h5>
+                                    <p class="card-text">Status: {{ character.status }}</p>
+                                    <p class="card-text">Species: {{ character.species }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="category == 'locations'">
+                    <h1 class="mb-2">{{ object?.name }}</h1>
+                    <label><strong>Type</strong> {{ object?.type }}</label>
+                    <br>
+                    <label><strong>Dimension:</strong> {{ object?.dimension }}</label>
+
+                    <h2 class="mt-5">Residents</h2>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let resident of characterList">
+                        <div class="card mb-4">
+                            <img [src]="resident.image" class="card-img-top" alt="{{resident.name}}">
+                            <div class="card-body">
+                            <h5 class="card-title">{{ resident.name }}</h5>
+                            <p class="card-text">Status: {{ resident.status }}</p>
+                            <p class="card-text">Species: {{ resident.species }}</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="category == 'character'">
+                    <h1 class="mb-4">{{ object?.name }}</h1>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img [src]="object?.image" class="img-fluid" alt="{{object?.name}}">
+                      </div>
+                      <div class="col-md-8">
+                        <p><strong>Status:</strong> {{ object?.status }}</p>
+                        <p><strong>Species:</strong> {{ object?.species }}</p>
+                        <p><strong>Gender:</strong> {{ object?.gender }}</p>
+                        <p><strong>Origin:</strong> {{ object?.origin?.name }}</p>
+                        <p><strong>Location:</strong> {{ object?.location?.name }}</p>
+                      </div>
+                    </div>
+                  
+                    <h2 class="mt-5">Episodes</h2>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Episode</th>
+                          <th>Name</th>
+                          <th>Air Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let episode of episodeList">
+                          <td>{{ episode.episode }}</td>
+                          <td>{{ episode.name }}</td>
+                          <td>{{ episode.air_date }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
