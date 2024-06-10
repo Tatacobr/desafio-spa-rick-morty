@@ -5,15 +5,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Configurations
 
 npm: '10.2.3',
-node: '20.10.0',  
+
+node: '20.10.0',
+
 @angular-devkit/architect       0.1402.11
+
 @angular-devkit/build-angular   14.2.11
+
 @angular-devkit/core            14.2.11
+
 @angular-devkit/schematics      14.0.7
+
 @angular/cli                    14.0.7
+
 @angular/material               7.0.0
+
 @schematics/angular             14.0.7
+
 rxjs                            7.5.7
+
 typescript                      4.7.4
 
 Run `npm i` to install all dependencies
